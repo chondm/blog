@@ -1,5 +1,18 @@
 //= require_self
 //= require_directory ./controllers
 
-var blog = angular.module('blog', [ ]);
+var Blog = angular.module('Blog', ['ngRoute']).config(['$routeProvider',
+  function($routeProvider) {
+    <%puts "=========================", asset_path('posts/index.html') %>
+    $routeProvider.
+    when('/post', {
+      templateUrl: "<%= asset_path('posts/index.html') %>",
+      controller: 'postCtrl'
+    });
+    return $routeProvider.otherwise({
+      templateUrl: '../assets/mainIndex.html',
+      controller: 'mainCtrl'
+    });
+  }
+]);
 

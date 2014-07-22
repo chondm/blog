@@ -1,0 +1,32 @@
+  <div class="modal-header">
+
+    <h4 class="modal-title">Add Vendor</h4>
+    <div class="clearfix"></div>
+  </div>
+  <div class="modal-body modal-body-padded">
+
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Enter Vendor name" ng-model="post.name">
+
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" name="contact_first_name" placeholder="First Name*" ng-model="post.contact_first_name" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control"  name="contact_last_name" placeholder="Last Name*" ng-model="post.contact_last_name" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" name="content" placeholder="Content*" ng-model="post.content" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" name="content" placeholder="Content*" ng-model="post.title" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" name="content" placeholder="Content*" ng-model="post.subject" required>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <p class="text-center"><button type="button" class="btn btn-primary" ng-click="createPost()">Save & Continue</button></p>
+  </div>

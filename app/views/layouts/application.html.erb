@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="blog">
+<html ng-app="Blog">
 <head>
   <title>Blog</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -7,8 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= yield %>
+<div class="container" ng-view>
+</div>
 
-<%= yield %>
 
 </body>
 </html>
