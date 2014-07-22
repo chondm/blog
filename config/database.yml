@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  username: postgres
+  password:
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: blog_development
+
+test:
+  <<: *default
+  database: blog_test
+
+production:
+  <<: *default
+  database: blog_production
